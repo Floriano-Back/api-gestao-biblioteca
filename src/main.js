@@ -429,7 +429,7 @@ app.get('/emprestimo/:id', async (req, res) => {
                 l.titulo AS Nome_Do_Livro 
             FROM emprestimo e 
             INNER JOIN clientes c ON e.id_clientes = c.cpf 
-            INNER JOIN livros l ON e.id_livro = l.isbn 
+            INNER JOIN livros l ON e.id_livros = l.isbn 
             WHERE e.id = ?
         `;
         
@@ -470,9 +470,9 @@ app.post('/emprestimo', async (req, res) => {
 app.patch('/emprestimo/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const { id_clientes, id_livro } = req.body;
+        const { id_clientes, id_livros } = req.body;
 
-        if (!id_clientes && !id_livro) {
+        if (!id_clientes && !id_livros) {
             return res.status(400).json({ erro: "Envie pelo menos um campo (id_clientes ou id_livro) para atualizar!" });
         }
 
@@ -480,7 +480,7 @@ app.patch('/emprestimo/:id', async (req, res) => {
         const valores = [];
 
         if (id_clientes) { camposAtualizar.push("id_clientes = ?"); valores.push(id_clientes); }
-        if (id_livro) { camposAtualizar.push("id_livro = ?"); valores.push(id_livro); }
+        if (id_livros) { camposAtualizar.push("id_livro = ?"); valores.push(id_livro); }
 
         const sqlCampos = camposAtualizar.join(", ");
         const query = `UPDATE emprestimo SET ${sqlCampos} WHERE id = ?`;
