@@ -24,4 +24,4 @@ Este é um projeto Fullstack de um sistema de biblioteca, desenvolvido como part
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/Floriano-Back/api-gestao-biblioteca.git](https://github.com/Floriano-Back/api-gestao-biblioteca.git)
+   git clone [https://github.com/Floriano-Back/api-gestao-biblioteca.git]
