@@ -14,7 +14,7 @@ const app = express(); //
 app.use(express.json()); //[cite: 1]
  
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || 'http://localhost:5500', 
+    origin: process.env.FRONTEND_URL || 'https://api-gestao-biblioteca.onrender.com/', 
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions)); // Agora apenas o SEU frontend pode fazer requisições
