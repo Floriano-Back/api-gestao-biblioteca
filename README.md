@@ -2,6 +2,8 @@
 
 Este é um projeto Fullstack de um sistema de biblioteca, desenvolvido como parte do meu aprendizado no **SENAI**. O sistema permite o gerenciamento completo de livros, autores, editoras, clientes e o registro de empréstimos de livros.
 
+## Link da aplicação (https://api-gestao-biblioteca.onrender.com/)
+
 ## 🚀 Funcionalidades (CRUD)
 * **Clientes:** Cadastro, listagem, atualização e remoção de clientes.
 * **Livros:** Registro de livros associados a autores e editoras.
